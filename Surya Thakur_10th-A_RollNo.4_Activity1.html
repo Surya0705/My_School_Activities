@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Blog | By: Surya0705</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita&family=Merriweather&family=Poppins&family=Ubuntu&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            background: #212529;
+            background-attachment: fixed;
+        }
+
+        .cards {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cards:hover {
+            filter: blur(0px);
+        }
+
+        .cards:hover .card {
+            filter: blur(15px);
+            transform: scale(0.9);
+            opacity: 0.5;
+        }
+
+        .cards .card:hover {
+            filter: blur(0px);
+            transform: scale(1.1);
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 480px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        .circle1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1488CC, #2B32B2);
+            clip-path: circle(225px at center 0);
+            text-align: center;
+        }
+
+        .circle2 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #9796f0, #fbc7d4);
+            ;
+            clip-path: circle(225px at center 0);
+            text-align: center;
+        }
+
+        .circle3 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ec008c, #fc6767);
+            ;
+            clip-path: circle(225px at center 0);
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 7.5rem;
+            padding: 45px 0;
+        }
+
+        .content {
+            position: relative;
+            bottom: 10px;
+            page-break-after: 20px;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .card {
+            text-align: center;
+        }
+
+        .custom {
+            margin: auto;
+            margin-bottom: 50px;
+            border-radius: 40px;
+        }
+
+        .navbar {
+            border-radius: 5px;
+        }
+
+        .navbar .d-flex {
+            font-family: 'Amita';
+        }
+
+        .navbar-light .navbar-brand {
+            font-family: 'Amita';
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            font-family: 'Amita';
+        }
+
+        .bg-custom {
+            background: linear-gradient(to right, rgb(0, 217, 255), rgb(2, 81, 209));
+        }
+
+        .container .main-container p {
+            color: black;
+        }
+
+        .main-post {
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .post {
+            transition: 1s transform cubic-bezier(.155, 1.105, .295, 1.12), 1s box-shadow, 1s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+            border-radius: 7px;
+            box-shadow: 10px 20px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 70px;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .post:hover {
+            transform: scale(1.01);
+            box-shadow: 10px 20px 8px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .navbar .nav-item :hover {
+            background: white;
+            border-radius: 5px;
+        }
+
+        .about {
+            background: linear-gradient(to right, rgb(197, 246, 255), rgb(255, 181, 181));
+            text-align: center;
+            margin-top: 10px;
+            padding: 2px;
+        }
+
+        .main-post p {
+            font-family: 'Ubuntu';
+        }
+
+        img {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .main-post p{
+            font-size: 1.16rem;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand">Blog | By: Surya0705</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active link1" aria-current="page" href="#top">Back to Blog Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active link2" href="#about">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Just Dummy Box! Doesn't work" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-container">
+            <div class="main-post post">
+                <h1 id="top">Impact of Human Population on the Environnment: </h1>
+                <hr>
+                <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia aliquid maxime
+                    necessitatibus voluptas porro quos laborum fugiat, architecto ad distinctio nemo blanditiis adipisci
+                    beatae dolorem fugit dolore nisi, facere nam similique deleniti laboriosam praesentium suscipit
+                    perspiciatis? Quod maiores, autem facere corrupti nesciunt aut accusantium, doloribus eos
+                    voluptatibus ullam omnis animi qui dolore quis voluptatem dolores illo sed commodi, ex nostrum unde.
+                    Velit quas at, maiores nam magni repudiandae, eos totam consectetur maxime voluptate quae pariatur
+                    soluta, neque rem molestias. Possimus ratione vero officia dolores at harum animi iure neque iusto
+                    expedita? Ullam, repellat quas atque veritatis corporis, alias fugit placeat, nulla ad saepe
+                    temporibus tempore error ab inventore adipisci sequi sapiente sed quae. Eveniet distinctio eum
+                    aliquid similique obcaecati accusantium laboriosam esse atque exercitationem, ducimus voluptatem
+                    earum voluptas minus! Provident aut expedita ipsum laudantium cupiditate! In, deserunt dolorum.
+                    Ipsum quasi sint eos consectetur quisquam quae sed in, sequi libero modi. Dolorum odio dolores
+                    veritatis, dolore, dignissimos quidem tempore praesentium delectus suscipit soluta qui porro
+                    quibusdam. Ratione, tempora velit! Ut molestiae labore fuga numquam ea dolor corporis laudantium
+                    adipisci quaerat, nobis excepturi. Quod quam, nobis officia exercitationem maiores dolores
+                    repellendus quia, hic optio corporis eius ut impedit cupiditate blanditiis vero alias saepe pariatur
+                    quos doloremque similique nostrum nihil? Accusantium nulla soluta voluptatem adipisci saepe!
+                    Voluptates obcaecati itaque dolorum! Nihil perspiciatis repellat quos ducimus, dicta delectus minima
+                    fugiat officiis laudantium architecto quaerat ipsam fugit corrupti nisi quas consequuntur, tempora,
+                    voluptatum libero sequi facere rerum. Officiis soluta voluptatibus esse dicta doloribus dignissimos
+                    obcaecati aliquid hic est, fugit eligendi deleniti maiores natus delectus magnam illo quidem aperiam
+                    officia! Odio, dolorum dolor unde obcaecati dolores maiores ut libero eius. Consequatur tempora qui
+                    eum reprehenderit ut accusamus nihil nobis odio voluptatum saepe, amet natus vero. Officiis labore
+                    eveniet, vitae debitis reiciendis sed repellendus suscipit quam. Molestiae voluptatibus blanditiis
+                    tempore assumenda suscipit aliquam, odio asperiores natus distinctio. Sunt doloribus natus beatae
+                    veritatis voluptatum veniam ullam reprehenderit quaerat odio voluptate, eos minus expedita ipsam
+                    rerum! Aliquam eligendi quae quidem quo rem aut obcaecati quos quod, hic voluptates ducimus
+                    necessitatibus quam nihil voluptatibus dolorem corrupti doloremque placeat at ad numquam similique,
+                    dignissimos cumque. Eius architecto aliquam optio rem culpa corporis at molestias possimus facilis,
+                    sed, ea in illo suscipit! Dolorem, consectetur, nesciunt porro id, tempore neque accusantium rem
+                    sapiente omnis eaque voluptatum quas at facere architecto et mollitia illo reiciendis unde placeat
+                    eveniet. Aspernatur, ea voluptatum, dolorem, in eligendi ipsa incidunt nisi quibusdam dignissimos
+                    similique velit illum quia odio blanditiis aut vitae dolore voluptatem ab et? Temporibus enim ad sit
+                    amet eos molestiae a nostrum impedit fugit, aliquid quasi omnis, excepturi doloribus quas. Ullam
+                    provident cupiditate, itaque cum deserunt mollitia nihil debitis? Architecto dicta magni totam
+                    repudiandae id incidunt ut laboriosam, aliquid, consectetur minus temporibus odit, obcaecati
+                    tenetur. Dignissimos itaque aliquam a repudiandae eum eligendi vel non est et iusto deserunt animi
+                    saepe tempore inventore consequatur, similique esse nobis iste, culpa ex obcaecati eos nemo! Placeat
+                    id, quo velit, illum debitis, molestiae facilis ea magni laboriosam voluptatum veniam.
+                </p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="circle1">
+                    <h2>01</h2>
+                </div>
+                <div class="content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat quia, alias,
+                        facere sit facilis fugit soluta in quasi debitis placeat a ad dolor minima, ipsa aut veritatis
+                        tempora incidunt.</p>
+                </div>
+                <button type="button" class="custom btn btn-outline-primary">Read More</button>
+            </div>
+            <div class="card">
+                <div class="circle2">
+                    <h2>02</h2>
+                </div>
+                <div class="content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat quia, alias,
+                        facere sit facilis fugit soluta in quasi debitis placeat a ad dolor minima, ipsa aut veritatis
+                        tempora incidunt.</p>
+                </div>
+                <button type="button" class="custom btn btn-outline-primary">Read More</button>
+            </div>
+            <div class="card">
+                <div class="circle3">
+                    <h2>03</h2>
+                </div>
+                <div class="content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat quia, alias,
+                        facere sit facilis fugit soluta in quasi debitis placeat a ad dolor minima, ipsa aut veritatis
+                        tempora incidunt.</p>
+                </div>
+                <button type="button" class="custom btn btn-outline-primary">Read More</button>
+            </div>
+        </div>
+    </div>
+    <div class="about" id='about'>
+        Copyright © 2021 [All Rights Reserved]. Made By:Surya Thakur from 10th-A (Roll no. 4). Copyright infrengment
+        should be intended on Unfair use.
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
